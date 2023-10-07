@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- External stylesheet for font-awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- External stylesheet for custom styles -->
+    <link rel="stylesheet" type="text/css" href="/Users/isabellahall/Downloads/basic-template/css/recipesearchstyle.css">
+    <!-- External JavaScript file for recipe search functionality -->
+    <script src="/Users/isabellahall/Downloads/basic-template/js/recipesearch.js" defer></script>
+    <!-- Document metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the website -->
+    <title>Your Website</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <!-- Home tab with home icon -->
+            <li><a href="#" id="homeTab"><i class="fas fa-home fa-xl"></i></a></li>
+            <!-- Link to Ingredients Pantry tab -->
+            <li><a href="#" id="openIngredientsTab">INGREDIENTS PANTRY</a></li>
+            <!-- Link to Recipe Search tab -->
+            <li><a href="#" id="recipeTab">RECIPE SEARCH</a></li>
+        </ul>
+    </nav>
+    <!-- Header section with the title -->
+    <header>
+        <h1>RECIPE SEARCH</h1>
+    </header>
+    <!-- Search bar container -->
+    <div class="search-bar-container">
+        <!-- Input field for recipe search -->
+        <input type="text" id="searchInput" class="search-input" placeholder="Search for recipes...">
+        <!-- Button to trigger the search -->
+        <button onclick="performSearch()" class="search-button">Search  <i class="fa-solid fa-magnifying-glass"></i></button>
+        <!-- Dropdown for filters -->
+        <div class="dropdown" onclick="toggleDropdown('myDropdown')">
+            <!-- Button to open the dropdown with filter icon -->
+            <button class="dropbtn"><i class="fa-solid fa-filter"></i></button>
+            <!-- Dropdown content -->
+            <div id="myDropdown" class="dropdown-content">
+                <!-- Link to filter by cuisine type -->
+                <a href="#cuisine" onclick="toggleDropdown('cuisineDropdown')">Cuisine Type</a>
+                <!-- Submenu content for cuisine types -->
+                <div id="cuisineDropdown" class="submenu-content">
+                    <label><input type="checkbox" value="italian" onchange="updateFilter('cuisine', this)"> Italian</label>
+                    <label><input type="checkbox" value="indian" onchange="updateFilter('cuisine', this)"> Indian</label>
+                    <label><input type="checkbox" value="chinese" onchange="updateFilter('cuisine', this)"> Chinese</label>
+                    <label><input type="checkbox" value="mexican" onchange="updateFilter('cuisine', this)"> Mexican</label>
+                    <label><input type="checkbox" value="american" onchange="updateFilter('cuisine', this)"> Traditional American</label>
+                </div>
+                <!-- Link to filter by ingredient pantry -->
+                <a href="#ingredient">Ingredient Pantry Based <input type="checkbox" id="pantryCheckbox" onchange="updateFilter('ingredient', this)"></a>
+            </div>
+        </div>
+    </div>
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Container for the recipe background -->
+        <div id="recipe-background" class="container">
+            <!-- Container for the recipe details -->
+            <div class="container" id="recipe-container">
+            </div>
+        </div>
+    </div>
+    <!-- Footer section with gear and info icons -->
+    <div class="footer">
+        <i class="fa-solid fa-gear fa-2x" style="padding-right: 25px; padding-left: 10px"></i>
+        <i class="fa-solid fa-circle-info fa-2x"></i>
+    </div>   
+</body>
+</html>

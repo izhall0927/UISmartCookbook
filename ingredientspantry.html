@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- External stylesheet for font-awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- External stylesheet for custom styles -->
+    <link rel="stylesheet" type="text/css" href="/Users/isabellahall/Downloads/basic-template/css/ingredientpantrystyle.css">
+    <!-- External JavaScript file for ingredient pantry functionality -->
+    <script src="/Users/isabellahall/Downloads/basic-template/js/ingredientpantry.js" defer></script>
+    <!-- Document metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the website -->
+    <title>Your Website</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <!-- Home tab with home icon -->
+            <li><a href="#" id="homeTab"><i class="fas fa-home fa-xl"></i></a></li>
+            <!-- Link to Ingredients Pantry tab -->
+            <li><a href="#" id="openIngredientsTab">INGREDIENTS PANTRY</a></li>
+            <!-- Link to Recipe Search tab -->
+            <li><a href="#" id="recipeTab">RECIPE SEARCH</a></li>
+        </ul>
+    </nav>
+    <!-- Header section with the title -->
+    <header>
+        <h1>INGREDIENTS PANTRY</h1>
+    </header>
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Content container for pantry, fridge, and spices sections -->
+        <div class="content-container">   
+            <!-- Pantry section -->
+            <div class="pantry-section">
+                <h2>My Pantry</h2>
+                <!-- Form for adding pantry items -->
+                <form id="pantry-form">
+                    <input type="text" id="food-item" placeholder="Add a pantry item">
+                    <!-- Button to add a pantry item -->
+                    <button type="button" class="add-button" onclick="addPantryItem()"><i class="fa-solid fa-plus"></i></button>
+                    <!-- Button to clear all pantry items -->
+                    <button type="button" class="clear-button" onclick="clearPantryItem()">Clear All</button>
+                </form>
+                <!-- List to display pantry items -->
+                <ul id="food-list">
+                </ul>
+            </div>
+            <!-- Fridge section -->
+            <div class="fridge-section">
+                <h2>My Fridge</h2>
+                <!-- Form for adding fridge items -->
+                <form id="fridge-form">
+                    <input type="text" id="fridge-item" placeholder="Add a fridge item">
+                    <!-- Button to add a fridge item -->
+                    <button type="button" class="add-button" onclick="addFridgeItem()"><i class="fa-solid fa-plus"></i></button>
+                    <!-- Button to clear all fridge items -->
+                    <button type="button" class="clear-button" onclick="clearFridgeItem()">Clear All</button>
+                </form>
+                <!-- List to display fridge items -->
+                <ul id="fridge-list">
+                </ul>
+            </div>
+            <!-- Spices section -->
+            <div class="spices-section">
+                <h2>My Spices</h2>
+                <!-- Form for adding spices -->
+                <form id="spices-form">
+                    <input type="text" id="spices-item" placeholder="Add a spice">
+                    <!-- Button to add a spice -->
+                    <button type="button" class="add-button" onclick="addSpiceItem()"><i class="fa-solid fa-plus"></i></button>
+                    <!-- Button to clear all spices -->
+                    <button type="button" class="clear-button" onclick="clearSpiceItem()">Clear All</button>
+                </form>
+                <!-- List to display spices -->
+                <ul id="spices-list">
+                </ul>
+            </div>
+        </div>
+        <!-- Footer section with gear and info icons -->
+        <div class="footer">
+            <i class="fa-solid fa-gear fa-2x" style="padding-right: 25px; padding-left: 10px"></i>
+            <i class="fa-solid fa-circle-info fa-2x"></i>
+        </div>
+    </div>
+</body>
+</html>
+
+

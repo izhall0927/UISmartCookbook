@@ -1,0 +1,119 @@
+/* Reset some default styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navigation styles (horizontal tabs) */
+  nav {
+    background-color: #334436;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0; /* Adjust padding to separate tabs from header */
+    font-size: medium;
+    margin-left: -20px;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 20px; /* Increase the margin to add space between tabs */
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px; /* Adjust padding to make tabs longer and wider */
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Add rounded corners to tabs */
+  }
+  nav ul li a:hover {
+    background-color: #1b3523;
+  }
+  
+  /* Header styles with the background color change */
+  header {
+    background-color: #647b59; /* Change the background color here */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+.container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Horizontally center items */
+    min-height: 100vh; /* Make sure the container takes up at least the full viewport height */
+}
+.content-container {
+    display: flex; /* Nested flexbox for image, circles, buttons, and footer */
+    align-items: flex-start; /* Vertically align items to the top */
+}
+
+.image-section {
+    text-align: left; /* Align the image to the left */
+    margin-top: 20px;
+    margin-bottom: 90px;
+    display: flex; /* Use flexbox to arrange image and circles */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.image-section img {
+    max-width: 60%;
+    height: auto;
+    display: block; /* Prevents any surrounding text from wrapping around the image */
+}
+
+.circle-container {
+    display: flex; /* Use flexbox to arrange circles */
+    flex-direction: column; /* Stack circles vertically */
+    align-items: flex-start; /* Horizontally align items to the left */
+    margin-left: 50px; /* Add margin between image and circles */
+}
+
+.circle {
+    width: 180px;
+    height: 180px;
+    background-color: #cfb88c;
+    border-radius: 50%;
+    margin: 10px 0; /* Add margin between circles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle-text {
+    color: #fff;
+    font-size: large;
+    position: absolute;
+    align-self: center; /* Vertically center text */
+}
+
+/* Style for the text boxes */
+.text-box {
+    background-color: #fff;
+    padding: 60px;
+    text-align: left;
+    flex-grow: 1; /* Allow text box to grow and take up remaining space */
+    font-size: large;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    padding: 15px 0;
+    width: 100%;
+    display: flex; /* Use flexbox for footer content */
+}
+
+/* Style for the Font Awesome icons */
+.fas {
+    font-size: 24px; /* Adjust the size as needed */
+    margin-right: 10px; /* Add margin between the icons */
+}
